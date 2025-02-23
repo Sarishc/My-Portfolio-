@@ -30,6 +30,32 @@ const ContactSection = () => {
             link: "https://github.com/Sarishc"
         }
     ];
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+        
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        fetch('https://formsubmit.co/chavansarish400@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then((response) => {
+            if (response.ok) {
+                // Clear the form fields
+                form.reset(); // This will reset the form fields to their initial values (empty in this case)
+                window.open('https://www.sarishchavan.com/thankyou', '_blank'); // Open the Thank You page in a new tab
+            }
+        })
+        .catch((error) => {
+            console.error("Error submitting form:", error);
+        })
+        .finally(() => {
+            setIsSubmitting(false);
+        });
+    };
+    
 
     return (
         <div className="min-h-screen bg-background">
@@ -48,41 +74,9 @@ const ContactSection = () => {
                     {/* Contact Form */}
                     <Card className="p-6 border border-[#5046e6]/20 bg-[#5046e6]/5 backdrop-blur-sm">
                         <form
-                            action="https://formsubmit.co/chavansarish400@gmail.com"
-                            method="POST"
+                            onSubmit={handleSubmit}
                             className="space-y-6"
                         >
-                            {/* Redirect after submission */}
-                            <input
-                                type="hidden"
-                                name="_next"
-                                value="https://your-portfolio-url.com/thank-you"
-                            />
-                            {/* Custom subject */}
-                            <input
-                                type="hidden"
-                                name="_subject"
-                                value="New Portfolio Contact!"
-                            />
-                            {/* Disable captcha - optional */}
-                            <input
-                                type="hidden"
-                                name="_captcha"
-                                value="false"
-                            />
-                            {/* Enable email autoresponse */}
-                            <input
-                                type="hidden"
-                                name="_autoresponse"
-                                value="Thank you for reaching out! I'll get back to you as soon as possible."
-                            />
-                            {/* Use table template */}
-                            <input
-                                type="hidden"
-                                name="_template"
-                                value="table"
-                            />
-
                             <div className="space-y-4">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="space-y-2">
