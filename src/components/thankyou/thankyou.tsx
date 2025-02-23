@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -38,13 +40,12 @@ const ThankYouPage = () => {
                                 Feel free to browse through my portfolio or check out my GitHub to see my latest projects.
                             </p>
                             <Button
-                                className="w-full bg-[#5046e6] hover:bg-[#4035cc] transition-colors mt-4"
-                                href="https://github.com/Sarishc"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Visit GitHub
-                            </Button>
+    onClick={() => window.open("https://github.com/Sarishc", "_blank")}
+    className="w-full bg-[#5046e6] hover:bg-[#4035cc] transition-colors mt-4"
+>
+    Visit GitHub
+</Button>
+
                         </Card>
                     </div>
                 </div>
