@@ -30,12 +30,12 @@ const HeroSection = () => {
                         <div className="space-y-4 lg:space-y-6">
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight animate-fade-in opacity-0"
                                 style={{animationDelay: '0.4s'}}>
-                                Hey there! I'm <span className="text-primary">Sarish Chavan</span>
+                                Hey there! I&apos;m <span className="text-primary">Sarish Chavan</span>
                             </h1>
                             <div className="space-y-4 text-base lg:text-lg text-muted-foreground animate-fade-in opacity-0"
                                  style={{animationDelay: '0.6s'}}>
                                 <p>
-                                    I'm a passionate data enthusiast with a keen eye for transforming data into
+                                    I&apos;m a passionate data enthusiast with a keen eye for transforming data into
                                     impactful insights.
                                 </p>
                                 <p>

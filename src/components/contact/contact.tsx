@@ -38,8 +38,8 @@ const ContactSection = () => {
                 <div className="mb-16">
                     <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
                     <p className="text-muted-foreground text-lg max-w-2xl">
-                        I'm always open to new opportunities and collaborations.
-                        Feel free to reach out if you'd like to discuss data analysis,
+                        I&apos;m always open to new opportunities and collaborations.
+                        Feel free to reach out if you&apos;d like to discuss data analysis,
                         visualizations, or potential projects.
                     </p>
                 </div>

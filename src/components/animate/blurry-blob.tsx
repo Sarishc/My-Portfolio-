@@ -6,7 +6,6 @@ interface BlobProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function BlurryBlob({
-                                       className,
                                        firstBlobColor,
                                        secondBlobColor,
                                    }: BlobProps) {
